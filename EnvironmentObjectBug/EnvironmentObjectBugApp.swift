@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct EnvironmentObjectBugApp: App {
+    
+    @StateObject private var dataProvider = DataProvider()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+                    .environmentObject(dataProvider)
+            }
         }
     }
 }
