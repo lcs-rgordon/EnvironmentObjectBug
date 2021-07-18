@@ -16,8 +16,8 @@ struct EnvironmentObjectBugApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
-                    .environmentObject(dataProvider)
             }
+            .environmentObject(dataProvider)
         }
     }
 }
